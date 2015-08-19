@@ -146,12 +146,12 @@
             }
         }
         
-        [[boxesButtonsArray objectAtIndex:i] setImage:imageHolder forState:UIControlStateNormal];
+        [[boxesButtonsArray objectAtIndex:i] setBackgroundImage:imageHolder forState: UIControlStateNormal];//setImage:imageHolder forState:UIControlStateNormal];
          i++;
     }
     
-    
-    savedImage = [[boxesButtonsArray objectAtIndex:0]currentImage];
+
+    savedImage = [[boxesButtonsArray objectAtIndex:0] backgroundImageForState:UIControlStateNormal];//[[boxesButtonsArray objectAtIndex:0]backgroundImage];// \\[[boxesButtonsArray objectAtIndex:0]currentImage];
     
     if (savedImage == NULL)
     {
