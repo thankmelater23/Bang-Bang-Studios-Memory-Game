@@ -32,7 +32,7 @@
     SystemSoundID *sIDGameOver;
     SystemSoundID *sIDNewLevel;
     SystemSoundID *sIDCamera;
-    
+    SystemSoundID *sIDWin;
     
     //Spaces Button Outlets
     IBOutlet UIButton *space0;

@@ -15,13 +15,13 @@
 
 @implementation ViewController
 //Syntesize
-@synthesize space0, space1, space2, space3, space4, space5, space6, space7, space8, space9, space10, space11, space12, space13, space14, space15, space16, space17;
+@synthesize space0, space1, space2, space3, space4, space5, space6, space7, space8, space9,
+space10, space11, space12, space13, space14, space15, space16, space17;
 
 @synthesize picturePlace0, picturePlace1, picturePlace2, picturePlace3, picturePlace4;
 /*********************************************/
 //Methods
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     [self initilizeVars];
     [self loadResources];
@@ -32,18 +32,16 @@
     [self playBackGroundMusic];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-    
--(void) initilizeVars
-{
+
+-(void) initilizeVars{
     //Set Vars
     levels = 0;
     boxStage = 0;
-
+    
     //Set Objects
     boxesButtonsArray       = [[NSMutableArray alloc]init];
     boxesImagesArray        = [[NSMutableArray alloc]init];
@@ -52,11 +50,10 @@
     win                     = NO;
     playActionEnabled        = NO;
     roundOver               = YES;
-        
+    
 }//Initializes Variables Created In ViewController
 
--(void) insertSpacesIntoArray
-{
+-(void) insertSpacesIntoArray{
     [boxesButtonsArray addObject:space0];
     [boxesButtonsArray addObject:space1];
     [boxesButtonsArray addObject:space2];
@@ -77,38 +74,39 @@
     [boxesButtonsArray addObject:space17];
 }//Put all the spaces(buttons) in an array of "spacesHolder"
 
--(void) loadResources
-{
+-(void) loadResources{
     //Load Audio Sounds
+    
     //Loads Click Sound
-    CFBundleRef ClickMainBundleClick = CFBundleGetMainBundle();
-    CFURLRef ClicksoundFileURLRefClick;
-    ClicksoundFileURLRefClick = CFBundleCopyResourceURL(ClickMainBundleClick, (CFStringRef) @"click", CFSTR ("wav"), NULL);
-    AudioServicesCreateSystemSoundID(ClicksoundFileURLRefClick, &sIDClick);
+    NSString *clickPath = [[NSBundle mainBundle]pathForResource:@"correct" ofType:@"wav"];
+    NSURL *clickPathurl = [NSURL fileURLWithPath:clickPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)clickPathurl, &sIDClick);
     
     //Load Game Over Sound
-    CFBundleRef ClickMainBundleGameOver = CFBundleGetMainBundle();
-    CFURLRef ClicksoundFileURLRefGameOver;
-    ClicksoundFileURLRefGameOver = CFBundleCopyResourceURL(ClickMainBundleGameOver, (CFStringRef) @"thunder", CFSTR ("wav"), NULL);
-    AudioServicesCreateSystemSoundID(ClicksoundFileURLRefGameOver, &sIDGameOver);
+    NSString *gameOverPath = [[NSBundle mainBundle]pathForResource:@"buzzer" ofType:@"wav"];
+    NSURL *gameOverPathurl = [NSURL fileURLWithPath:gameOverPath];
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)gameOverPathurl, &sIDGameOver);
     
     //Load New Level
-    CFBundleRef ClickMainBundleNewLevel = CFBundleGetMainBundle();
-    CFURLRef ClicksoundFileURLRefNewLevel;
-    ClicksoundFileURLRefNewLevel = CFBundleCopyResourceURL(ClickMainBundleNewLevel, (CFStringRef) @"Magic Tree", CFSTR ("wav"), NULL);
-    AudioServicesCreateSystemSoundID(ClicksoundFileURLRefNewLevel, &sIDNewLevel);
+    NSString *newLevelPath = [[NSBundle mainBundle]pathForResource:@"success" ofType:@"wav"];
+    NSURL *newLevelPathurl = [NSURL fileURLWithPath:newLevelPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)newLevelPathurl, &sIDNewLevel);
     
-    //Load New Level
-    CFBundleRef ClickMainBundleCamera = CFBundleGetMainBundle();
-    CFURLRef ClicksoundFileURLRefCamera;
-    ClicksoundFileURLRefCamera = CFBundleCopyResourceURL(ClickMainBundleCamera, (CFStringRef) @"camera", CFSTR ("wav"), NULL);
-    AudioServicesCreateSystemSoundID(ClicksoundFileURLRefCamera, &sIDCamera);
+    //Load Camera
+    NSString *cameraPath = [[NSBundle mainBundle]pathForResource:@"camera" ofType:@"wav"];
+    NSURL *cameraPathurl = [NSURL fileURLWithPath:cameraPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)cameraPathurl, &sIDCamera);
+    
+    //Load Camera
+    NSString *winPath = [[NSBundle mainBundle]pathForResource:@"win" ofType:@"wav"];
+    NSURL *winPathurl = [NSURL fileURLWithPath:winPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)winPathurl, &sIDWin);
 }
 /*******************************************************************************/
 //GamePlay
 
--(void) createRandomAssortment
-{
+-(void) createRandomAssortment{
     int pictureRandomGeneratedNumber = 0;;
     int i = 0;
     NSUInteger maxCount = [boxesButtonsArray count];
@@ -145,12 +143,13 @@
                 break;
             }
         }
-        
+        //For debug mode when need to win
+        imageHolder = picturePlace0.currentBackgroundImage;
         [[boxesButtonsArray objectAtIndex:i] setBackgroundImage:imageHolder forState: UIControlStateNormal];//setImage:imageHolder forState:UIControlStateNormal];
-         i++;
+        i++;
     }
     
-
+    
     savedImage = [[boxesButtonsArray objectAtIndex:0] backgroundImageForState:UIControlStateNormal];//[[boxesButtonsArray objectAtIndex:0]backgroundImage];// \\[[boxesButtonsArray objectAtIndex:0]currentImage];
     
     if (savedImage == NULL)
@@ -160,8 +159,7 @@
     
 }//Assigns an image to each space at the beggining of new game play
 
--(IBAction) faceChooser:(id)sender
-{
+-(IBAction) faceChooser:(id)sender{
     [self playBackGroundMusic];
     
     if (playActionEnabled == YES)
@@ -172,37 +170,39 @@
         
         if ([savedImage isEqual:tempSenderImage] == YES)
         {
-            if (levels != 17)
+            if (levels < 17)
             {
                 [self showBoxesSelected];
                 ++boxStage;
-                savedImage =[[boxesButtonsArray objectAtIndex:boxStage]currentImage];
-            }
-            else{
+                savedImage =[[boxesButtonsArray objectAtIndex:boxStage]backgroundImageForState:UIControlStateNormal];
+            }else{
                 win = YES;
+                [self showBoxesSelected];
             }
-        }
-        else{
+        }else{
             gameOver = YES;
         }
     }
     
-    if ((boxStage - 1) == levels)
-    {
-        ++levels;
-        roundOver = YES;
-    }
     
-    if(win != YES && gameOver != YES)
+    if(win != YES || gameOver != YES)
     {
+        if ((boxStage - 1) == levels)
+        {
+            ++levels;
+            roundOver = YES;
+        }
+        
         [self nextLevel];
     }
+//    if (levels == 17){
+//        [self win];
+//    }
     [self win];
     [self gameOver];
 }//Box selector for current box
 
--(void) nextLevel
-{
+-(void) nextLevel{
     if (roundOver == YES)
     {
         if (levels != 0)
@@ -215,25 +215,23 @@
         [self blinkAll];
         roundOver = NO;
         boxStage = 0;
-        savedImage =[[boxesButtonsArray objectAtIndex:boxStage]currentImage];
+        savedImage =[[boxesButtonsArray objectAtIndex:boxStage]backgroundImageForState:UIControlStateNormal];
     }
 }//Sets up next level as the previous one was cleared
 
--(void) hideBoxes
-{
+-(void) hideBoxes{
     int i = 0;
     int maxCount = [boxesButtonsArray count];
     
     while (i != maxCount)
-    {        
+    {
         [[boxesButtonsArray objectAtIndex:i] setHidden:YES];
         i++;
     }
-
+    
 }//Hides all buttons at the beggining of new gameplay
 
--(void) showBoxes
-{
+-(void) showBoxes{
     NSUInteger i = 0;
     NSUInteger *maxCount = [boxesButtonsArray count];
     
@@ -245,39 +243,40 @@
     
 }//Shows all boxes that was initialzed in the createRandomAssortment function
 
--(void) showBoxesCurrent
-{
+-(void) showBoxesCurrent{
     int i = 0;
     int maxCount = levels;
     
     while (i <= maxCount)
     {
-            
+        
         [[boxesButtonsArray objectAtIndex:i] setHidden:NO];
         [[boxesButtonsArray objectAtIndex:i] setHighlighted:NO];
         i++;
     }
-
+    
     
 }//Show all boxes to click for this level
 
--(void) showBoxesSelected
-{
+-(void) showBoxesSelected{
     int i = 0;
     int maxCount = boxStage;
     
-    while (i <= maxCount)
-    {
+    while (i <= maxCount){
         
         [[boxesButtonsArray objectAtIndex:i] setHidden:NO];
-        [[boxesButtonsArray objectAtIndex:i] setHighlighted:YES];
+
         i++;
+        
+        if (levels == 16 && i == maxCount){
+            win = true;
+        }
+        
     }
     
 }//Show boxes already Selected
 
--(void) blinkAll
-{
+-(void) blinkAll{
     [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(showBoxesCurrent) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(playCamera) userInfo:nil repeats:NO];
     
@@ -300,16 +299,15 @@
     [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(enableGamePlay) userInfo:nil repeats:NO];
 }//Blinks all boxes of this level 3 times then hides them to be chosen
 
--(void) enableGamePlay
-{
+-(void) enableGamePlay{
     playActionEnabled = YES;
     [goWait setTitle:@"GO" forState:UIControlStateNormal];
 }//Sets playActionEnabled to YES
 
--(void) win
-{
+-(void) win{
     if (win == YES)
     {
+        [self playWin];
         [self hideBoxes];
         [self initilizeVars];
         [self insertSpacesIntoArray];
@@ -318,8 +316,7 @@
     }
 }//Player wins game restart game
 
--(void) gameOver
-{
+-(void) gameOver{
     if (gameOver == YES)
     {
         [self playGameOver];
@@ -330,41 +327,47 @@
         [self nextLevel];
     }
 }//Game over restart gane
-
 /***********************************************/
 //Resources
 
 //Play Audio
-- (void)playClick
-{
+- (void)playClick{
+    //    avPlayer.volume =  1.0;
     AudioServicesPlaySystemSound(sIDClick);
-    
 }
 
-- (void)playGameOver
-{
+- (void)playGameOver{
+    //    avPlayer.volume =  0.1;
     AudioServicesPlaySystemSound(sIDGameOver);
     
 }
 
-- (void)playNewLevel
-{
+- (void)playNewLevel{
+    //    avPlayer.volume =  0.1;
     AudioServicesPlaySystemSound(sIDNewLevel);
     
 }
 
-- (void)playCamera
-{
+- (void)playCamera{
+    //    avPlayer.volume =  0.1;
     AudioServicesPlaySystemSound(sIDCamera);
     
 }
 
-- (void) playBackGroundMusic
-{
+- (void)playWin{
+    //    avPlayer.volume =  0.1;
+    AudioServicesPlaySystemSound(sIDWin);
+    
+}
+
+- (void) playBackGroundMusic{
     if([avPlayer isPlaying] == NO)
     {
+        
+        
+        //    avPlayer.volume =  0.1;
         [avPlayer stop];
-        NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"music fun loop" ofType:@"wav"];
+        NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"Classy-8-Bit" ofType:@"mp3"];
         NSURL *url = [NSURL fileURLWithPath:stringPath];
         
         NSError *error;

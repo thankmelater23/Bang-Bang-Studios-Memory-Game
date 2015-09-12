@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C605DC801BA3E7F1009132F7 /* Upward-Blip-ility.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C605DC7F1BA3E7F1009132F7 /* Upward-Blip-ility.mp3 */; settings = {ASSET_TAGS = (); }; };
+		C642A7C61BA410C500C9C513 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7C51BA410C500C9C513 /* success.wav */; settings = {ASSET_TAGS = (); }; };
+		C642A7CA1BA410F900C9C513 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7C91BA410F900C9C513 /* win.wav */; settings = {ASSET_TAGS = (); }; };
+		C642A7CC1BA4142800C9C513 /* denied.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7CB1BA4142800C9C513 /* denied.wav */; settings = {ASSET_TAGS = (); }; };
+		C642A7CE1BA41ADB00C9C513 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7CD1BA41ADB00C9C513 /* correct.wav */; settings = {ASSET_TAGS = (); }; };
+		C642A7D01BA428B700C9C513 /* Classy-8-Bit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C642A7CF1BA428B700C9C513 /* Classy-8-Bit.mp3 */; settings = {ASSET_TAGS = (); }; };
+		C642A7D31BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7D11BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav */; settings = {ASSET_TAGS = (); }; };
+		C642A7D41BA431DE00C9C513 /* buzzer.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7D21BA431DE00C9C513 /* buzzer.wav */; settings = {ASSET_TAGS = (); }; };
 		E689CE0316B675EE0083D52D /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = E689CE0216B675EE0083D52D /* box.png */; };
 		E689CE0A16B6BD140083D52D /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = E689CE0916B6BD140083D52D /* icon_57x57.png */; };
 		E689CE0C16B6BD1A0083D52D /* icon_57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E689CE0B16B6BD1A0083D52D /* icon_57x57@2x.png */; };
@@ -43,6 +51,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C605DC7F1BA3E7F1009132F7 /* Upward-Blip-ility.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Upward-Blip-ility.mp3"; sourceTree = "<group>"; };
+		C642A7C51BA410C500C9C513 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		C642A7C91BA410F900C9C513 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		C642A7CB1BA4142800C9C513 /* denied.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = denied.wav; sourceTree = "<group>"; };
+		C642A7CD1BA41ADB00C9C513 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		C642A7CF1BA428B700C9C513 /* Classy-8-Bit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Classy-8-Bit.mp3"; sourceTree = "<group>"; };
+		C642A7D11BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 164089__hypocore__buzzer2.wav; sourceTree = "<group>"; };
+		C642A7D21BA431DE00C9C513 /* buzzer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buzzer.wav; sourceTree = "<group>"; };
 		E689CE0216B675EE0083D52D /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		E689CE0916B6BD140083D52D /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57x57.png; path = ../icon_57x57.png; sourceTree = "<group>"; };
 		E689CE0B16B6BD1A0083D52D /* icon_57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_57x57@2x.png"; path = "../icon_57x57@2x.png"; sourceTree = "<group>"; };
@@ -155,9 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				E6DB7FAD16C68D1500307A6E /* Sound */,
-				E6DB7FAE16C68D2500307A6E /* music fun loop.wav */,
-				E6DB7FB216C68F4700307A6E /* click.wav */,
-				E6DB7FB016C68DCD00307A6E /* camera.wav */,
 				E6AE05EF16B5317500C66EB7 /* Pictures */,
 				E6AE05D116B52F3600C66EB7 /* Penn Game-Info.plist */,
 				E6AE05D216B52F3600C66EB7 /* InfoPlist.strings */,
@@ -194,6 +207,17 @@
 			isa = PBXGroup;
 			children = (
 				E6DB7FB816C691B200307A6E /* Magic Tree.wav */,
+				E6DB7FAE16C68D2500307A6E /* music fun loop.wav */,
+				C642A7C51BA410C500C9C513 /* success.wav */,
+				E6DB7FB216C68F4700307A6E /* click.wav */,
+				C642A7CF1BA428B700C9C513 /* Classy-8-Bit.mp3 */,
+				C642A7D11BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav */,
+				C642A7D21BA431DE00C9C513 /* buzzer.wav */,
+				C642A7CD1BA41ADB00C9C513 /* correct.wav */,
+				C642A7CB1BA4142800C9C513 /* denied.wav */,
+				C605DC7F1BA3E7F1009132F7 /* Upward-Blip-ility.mp3 */,
+				C642A7C91BA410F900C9C513 /* win.wav */,
+				E6DB7FB016C68DCD00307A6E /* camera.wav */,
 				E6DB7FB616C691A900307A6E /* thunder.wav */,
 			);
 			name = Sound;
@@ -254,14 +278,21 @@
 				E6AE05DC16B52F3600C66EB7 /* Default.png in Resources */,
 				E6AE05DE16B52F3600C66EB7 /* Default@2x.png in Resources */,
 				E6AE05E016B52F3600C66EB7 /* Default-568h@2x.png in Resources */,
+				C605DC801BA3E7F1009132F7 /* Upward-Blip-ility.mp3 in Resources */,
+				C642A7C61BA410C500C9C513 /* success.wav in Resources */,
 				E6AE05E316B52F3600C66EB7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E6AE05E616B52F3600C66EB7 /* MainStoryboard_iPad.storyboard in Resources */,
 				E6AE05FA16B5318800C66EB7 /* Logan.JPG in Resources */,
 				E6AE05FB16B5318800C66EB7 /* Zak.JPG in Resources */,
 				E6AE05FC16B5318800C66EB7 /* Miche.JPG in Resources */,
+				C642A7CE1BA41ADB00C9C513 /* correct.wav in Resources */,
+				C642A7CC1BA4142800C9C513 /* denied.wav in Resources */,
 				E6AE05FD16B5318800C66EB7 /* Soph.JPG in Resources */,
+				C642A7D31BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav in Resources */,
+				C642A7D01BA428B700C9C513 /* Classy-8-Bit.mp3 in Resources */,
 				E6AE05FE16B5318800C66EB7 /* Lil Zan.JPG in Resources */,
 				E6AE05FF16B5318800C66EB7 /* Group BTB.JPG in Resources */,
+				C642A7CA1BA410F900C9C513 /* win.wav in Resources */,
 				E6AE060016B5318800C66EB7 /* Lil Soph.JPG in Resources */,
 				E6AE060116B5318800C66EB7 /* Group BTB Log.JPG in Resources */,
 				E6AE060216B5318800C66EB7 /* Group BTB Log Swing.JPG in Resources */,
@@ -272,6 +303,7 @@
 				E689CE0C16B6BD1A0083D52D /* icon_57x57@2x.png in Resources */,
 				E6DB7FAF16C68D2500307A6E /* music fun loop.wav in Resources */,
 				E6DB7FB116C68DCD00307A6E /* camera.wav in Resources */,
+				C642A7D41BA431DE00C9C513 /* buzzer.wav in Resources */,
 				E6DB7FB316C68F4700307A6E /* click.wav in Resources */,
 				E6DB7FB716C691A900307A6E /* thunder.wav in Resources */,
 				E6DB7FB916C691B200307A6E /* Magic Tree.wav in Resources */,
