@@ -91,7 +91,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
     //Load New Level
     NSString *newLevelPath = [[NSBundle mainBundle]pathForResource:@"success" ofType:@"wav"];
     NSURL *newLevelPathurl = [NSURL fileURLWithPath:newLevelPath];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)newLevelPathurl, &sIDNewLevel);
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)newLevelPathurl, sIDNewLevel);
     
     //Load Camera
     NSString *cameraPath = [[NSBundle mainBundle]pathForResource:@"camera" ofType:@"wav"];
@@ -144,7 +144,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
             }
         }
         //For debug mode when need to win
-        imageHolder = picturePlace0.currentBackgroundImage;
+//        imageHolder = picturePlace0.currentBackgroundImage;
         [[boxesButtonsArray objectAtIndex:i] setBackgroundImage:imageHolder forState: UIControlStateNormal];//setImage:imageHolder forState:UIControlStateNormal];
         i++;
     }
@@ -344,7 +344,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
 
 - (void)playNewLevel{
     //    avPlayer.volume =  0.1;
-    AudioServicesPlaySystemSound(sIDNewLevel);
+    AudioServicesPlaySystemSound(&sIDNewLevel);
     
 }
 
@@ -365,7 +365,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
     {
         
         
-        //    avPlayer.volume =  0.1;
+            avPlayer.volume =  0.1;
         [avPlayer stop];
         NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"Classy-8-Bit" ofType:@"mp3"];
         NSURL *url = [NSURL fileURLWithPath:stringPath];

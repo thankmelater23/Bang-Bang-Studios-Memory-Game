@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88104D53441A8F4EB8E1927F /* libPods-Penn Game.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F50A35F4AFC4EE322B8A53A /* libPods-Penn Game.a */; };
 		C605DC801BA3E7F1009132F7 /* Upward-Blip-ility.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C605DC7F1BA3E7F1009132F7 /* Upward-Blip-ility.mp3 */; settings = {ASSET_TAGS = (); }; };
 		C642A7C61BA410C500C9C513 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7C51BA410C500C9C513 /* success.wav */; settings = {ASSET_TAGS = (); }; };
 		C642A7CA1BA410F900C9C513 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7C91BA410F900C9C513 /* win.wav */; settings = {ASSET_TAGS = (); }; };
@@ -15,6 +16,10 @@
 		C642A7D01BA428B700C9C513 /* Classy-8-Bit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C642A7CF1BA428B700C9C513 /* Classy-8-Bit.mp3 */; settings = {ASSET_TAGS = (); }; };
 		C642A7D31BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7D11BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav */; settings = {ASSET_TAGS = (); }; };
 		C642A7D41BA431DE00C9C513 /* buzzer.wav in Resources */ = {isa = PBXBuildFile; fileRef = C642A7D21BA431DE00C9C513 /* buzzer.wav */; settings = {ASSET_TAGS = (); }; };
+		C65672071BA5A3D0007D06C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65672031BA5A3D0007D06C6 /* Security.framework */; settings = {ASSET_TAGS = (); }; };
+		C65672081BA5A3D0007D06C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65672041BA5A3D0007D06C6 /* SystemConfiguration.framework */; settings = {ASSET_TAGS = (); }; };
+		C65672091BA5A3D0007D06C6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65672051BA5A3D0007D06C6 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		C656720A1BA5A3D0007D06C6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65672061BA5A3D0007D06C6 /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 		E689CE0316B675EE0083D52D /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = E689CE0216B675EE0083D52D /* box.png */; };
 		E689CE0A16B6BD140083D52D /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = E689CE0916B6BD140083D52D /* icon_57x57.png */; };
 		E689CE0C16B6BD1A0083D52D /* icon_57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E689CE0B16B6BD1A0083D52D /* icon_57x57@2x.png */; };
@@ -51,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F50A35F4AFC4EE322B8A53A /* libPods-Penn Game.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Penn Game.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C605DC7F1BA3E7F1009132F7 /* Upward-Blip-ility.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Upward-Blip-ility.mp3"; sourceTree = "<group>"; };
 		C642A7C51BA410C500C9C513 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		C642A7C91BA410F900C9C513 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
@@ -59,6 +65,10 @@
 		C642A7CF1BA428B700C9C513 /* Classy-8-Bit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Classy-8-Bit.mp3"; sourceTree = "<group>"; };
 		C642A7D11BA431DE00C9C513 /* 164089__hypocore__buzzer2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 164089__hypocore__buzzer2.wav; sourceTree = "<group>"; };
 		C642A7D21BA431DE00C9C513 /* buzzer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buzzer.wav; sourceTree = "<group>"; };
+		C65672031BA5A3D0007D06C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Security.framework; sourceTree = "<group>"; };
+		C65672041BA5A3D0007D06C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
+		C65672051BA5A3D0007D06C6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		C65672061BA5A3D0007D06C6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E689CE0216B675EE0083D52D /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		E689CE0916B6BD140083D52D /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57x57.png; path = ../icon_57x57.png; sourceTree = "<group>"; };
 		E689CE0B16B6BD1A0083D52D /* icon_57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_57x57@2x.png"; path = "../icon_57x57@2x.png"; sourceTree = "<group>"; };
@@ -97,6 +107,8 @@
 		E6DB7FB416C6900E00307A6E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E6DB7FB616C691A900307A6E /* thunder.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = thunder.wav; sourceTree = "<group>"; };
 		E6DB7FB816C691B200307A6E /* Magic Tree.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Magic Tree.wav"; sourceTree = "<group>"; };
+		F334B9D3B0D6B57A735693C8 /* Pods-Penn Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Penn Game.release.xcconfig"; path = "Pods/Target Support Files/Pods-Penn Game/Pods-Penn Game.release.xcconfig"; sourceTree = "<group>"; };
+		FB1373006A713E5F76AFFDAC /* Pods-Penn Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Penn Game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Penn Game/Pods-Penn Game.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +117,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6DB7FB516C6900E00307A6E /* AudioToolbox.framework in Frameworks */,
+				C656720A1BA5A3D0007D06C6 /* Crashlytics.framework in Frameworks */,
+				C65672081BA5A3D0007D06C6 /* SystemConfiguration.framework in Frameworks */,
 				E6DB7FAC16C68C5D00307A6E /* AVFoundation.framework in Frameworks */,
+				C65672091BA5A3D0007D06C6 /* Fabric.framework in Frameworks */,
 				E6AE05CA16B52F3600C66EB7 /* UIKit.framework in Frameworks */,
 				E6AE05CC16B52F3600C66EB7 /* Foundation.framework in Frameworks */,
+				C65672071BA5A3D0007D06C6 /* Security.framework in Frameworks */,
 				E6AE05CE16B52F3600C66EB7 /* CoreGraphics.framework in Frameworks */,
+				88104D53441A8F4EB8E1927F /* libPods-Penn Game.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8094799AC5ECE28C72DAE81C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB1373006A713E5F76AFFDAC /* Pods-Penn Game.debug.xcconfig */,
+				F334B9D3B0D6B57A735693C8 /* Pods-Penn Game.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E69C560F16B56FB3003FA0D8 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,11 +153,16 @@
 		E6AE05BA16B52F3600C66EB7 = {
 			isa = PBXGroup;
 			children = (
+				C65672031BA5A3D0007D06C6 /* Security.framework */,
+				C65672041BA5A3D0007D06C6 /* SystemConfiguration.framework */,
+				C65672051BA5A3D0007D06C6 /* Fabric.framework */,
+				C65672061BA5A3D0007D06C6 /* Crashlytics.framework */,
 				E6DB7FB416C6900E00307A6E /* AudioToolbox.framework */,
 				E6DB7FAB16C68C5D00307A6E /* AVFoundation.framework */,
 				E6AE05CF16B52F3600C66EB7 /* Penn Game */,
 				E6AE05C816B52F3600C66EB7 /* Frameworks */,
 				E6AE05C616B52F3600C66EB7 /* Products */,
+				8094799AC5ECE28C72DAE81C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +180,7 @@
 				E6AE05C916B52F3600C66EB7 /* UIKit.framework */,
 				E6AE05CB16B52F3600C66EB7 /* Foundation.framework */,
 				E6AE05CD16B52F3600C66EB7 /* CoreGraphics.framework */,
+				4F50A35F4AFC4EE322B8A53A /* libPods-Penn Game.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,9 +262,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6AE05EC16B52F3600C66EB7 /* Build configuration list for PBXNativeTarget "Penn Game" */;
 			buildPhases = (
+				22D3E145238A35FC56172334 /* Check Pods Manifest.lock */,
 				E6AE05C116B52F3600C66EB7 /* Sources */,
 				E6AE05C216B52F3600C66EB7 /* Frameworks */,
 				E6AE05C316B52F3600C66EB7 /* Resources */,
+				C65671FE1BA5A385007D06C6 /* ShellScript */,
+				384EE6D93ED18BAAA8120C88 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -311,6 +346,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22D3E145238A35FC56172334 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		384EE6D93ED18BAAA8120C88 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Penn Game/Pods-Penn Game-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C65671FE1BA5A385007D06C6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 4b84b1226e93ac404abf87cdd625fca3f2f67cb7 9174c325d1ac51dcae9ee142e60f7bc1545e4d23a1ce0b5e09574eada9f888d3\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6AE05C116B52F3600C66EB7 /* Sources */ = {
@@ -408,7 +489,12 @@
 		};
 		E6AE05ED16B52F3600C66EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB1373006A713E5F76AFFDAC /* Pods-Penn Game.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Penn Game/Penn Game-Prefix.pch";
 				INFOPLIST_FILE = "Penn Game/Penn Game-Info.plist";
@@ -420,7 +506,12 @@
 		};
 		E6AE05EE16B52F3600C66EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F334B9D3B0D6B57A735693C8 /* Pods-Penn Game.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Penn Game/Penn Game-Prefix.pch";
 				INFOPLIST_FILE = "Penn Game/Penn Game-Info.plist";
