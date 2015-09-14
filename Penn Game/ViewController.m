@@ -144,7 +144,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
             }
         }
         //For debug mode when need to win
-//        imageHolder = picturePlace0.currentBackgroundImage;
+        imageHolder = picturePlace0.currentBackgroundImage;
         [[boxesButtonsArray objectAtIndex:i] setBackgroundImage:imageHolder forState: UIControlStateNormal];//setImage:imageHolder forState:UIControlStateNormal];
         i++;
     }
@@ -168,16 +168,14 @@ space10, space11, space12, space13, space14, space15, space16, space17;
         
         UIImage *tempSenderImage = [sender currentBackgroundImage];
         
-        if ([savedImage isEqual:tempSenderImage] == YES)
-        {
-            if (levels < 17)
-            {
-                [self showBoxesSelected];
-                ++boxStage;
+        if ([savedImage isEqual:tempSenderImage] == YES){
+            [self showBoxesSelected];
+            ++boxStage;
+            
+            if (levels < 17){
                 savedImage =[[boxesButtonsArray objectAtIndex:boxStage]backgroundImageForState:UIControlStateNormal];
-            }else{
+            }else if ((boxStage == boxesButtonsArray.count)){
                 win = YES;
-                [self showBoxesSelected];
             }
         }else{
             gameOver = YES;
@@ -185,19 +183,19 @@ space10, space11, space12, space13, space14, space15, space16, space17;
     }
     
     
-    if(win != YES || gameOver != YES)
-    {
-        if ((boxStage - 1) == levels)
-        {
-            ++levels;
-            roundOver = YES;
+    if(win != YES || gameOver != YES){
+        if(boxStage - 1 == levels){
+        ++levels;
+        roundOver = YES;
         }
         
         [self nextLevel];
     }
-//    if (levels == 17){
-//        [self win];
+    
+//    if ((boxStage == 1)){
+//        win = true;
 //    }
+    
     [self win];
     [self gameOver];
 }//Box selector for current box
@@ -209,6 +207,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
         {
             [self playNewLevel];
         }
+        
         playActionEnabled = NO;
         [goWait setTitle:@"WAIT" forState:UIControlStateNormal];
         
@@ -267,10 +266,6 @@ space10, space11, space12, space13, space14, space15, space16, space17;
         [[boxesButtonsArray objectAtIndex:i] setHidden:NO];
 
         i++;
-        
-        if (levels == 16 && i == maxCount){
-            win = true;
-        }
         
     }
     
@@ -363,17 +358,17 @@ space10, space11, space12, space13, space14, space15, space16, space17;
 - (void) playBackGroundMusic{
     if([avPlayer isPlaying] == NO)
     {
+    
         
-        
-            avPlayer.volume =  0.1;
-        [avPlayer stop];
-        NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"Classy-8-Bit" ofType:@"mp3"];
-        NSURL *url = [NSURL fileURLWithPath:stringPath];
-        
-        NSError *error;
-        
-        avPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error: &error];
-        [avPlayer play];
+//        avPlayer.volume =  0.1;
+//        [avPlayer stop];
+//        NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"Classy-8-Bit" ofType:@"mp3"];
+//        NSURL *url = [NSURL fileURLWithPath:stringPath];
+//        
+//        NSError *error;
+//        
+//        avPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error: &error];
+//        [avPlayer play];
     }
     
 }
