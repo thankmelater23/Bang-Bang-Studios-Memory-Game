@@ -286,6 +286,11 @@
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "HnG Studios";
+				TargetAttributes = {
+					E6AE05C416B52F3600C66EB7 = {
+						DevelopmentTeam = ZJWNZ643CG;
+					};
+				};
 			};
 			buildConfigurationList = E6AE05BF16B52F3600C66EB7 /* Build configuration list for PBXProject "Penn Game" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -491,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB1373006A713E5F76AFFDAC /* Pods-Penn Game.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -498,7 +504,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Penn Game/Penn Game-Prefix.pch";
 				INFOPLIST_FILE = "Penn Game/Penn Game-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "HnG-Studios.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BangBangStudios.Penn-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -508,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F334B9D3B0D6B57A735693C8 /* Pods-Penn Game.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -515,7 +522,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Penn Game/Penn Game-Prefix.pch";
 				INFOPLIST_FILE = "Penn Game/Penn Game-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "HnG-Studios.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BangBangStudios.Penn-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

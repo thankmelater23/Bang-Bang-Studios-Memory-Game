@@ -144,7 +144,7 @@ space10, space11, space12, space13, space14, space15, space16, space17;
             }
         }
         //For debug mode when need to win
-        imageHolder = picturePlace0.currentBackgroundImage;
+//        imageHolder = picturePlace0.currentBackgroundImage;
         [[boxesButtonsArray objectAtIndex:i] setBackgroundImage:imageHolder forState: UIControlStateNormal];//setImage:imageHolder forState:UIControlStateNormal];
         i++;
     }
@@ -230,6 +230,18 @@ space10, space11, space12, space13, space14, space15, space16, space17;
     
 }//Hides all buttons at the beggining of new gameplay
 
+-(void) hideLastBox{
+    
+    [[boxesButtonsArray objectAtIndex:levels] setHidden:YES];
+    
+}//Hides last box
+
+-(void) showLastBox{
+    
+    [[boxesButtonsArray objectAtIndex:levels] setHidden:NO];
+    
+}//Hides last box
+
 -(void) showBoxes{
     NSUInteger i = 0;
     NSUInteger *maxCount = [boxesButtonsArray count];
@@ -243,17 +255,17 @@ space10, space11, space12, space13, space14, space15, space16, space17;
 }//Shows all boxes that was initialzed in the createRandomAssortment function
 
 -(void) showBoxesCurrent{
-    int i = 0;
-    int maxCount = levels;
     
-    while (i <= maxCount)
-    {
-        
-        [[boxesButtonsArray objectAtIndex:i] setHidden:NO];
-        [[boxesButtonsArray objectAtIndex:i] setHighlighted:NO];
-        i++;
-    }
-    
+//    while (i <= maxCount)
+//    {
+//        
+//        [[boxesButtonsArray objectAtIndex:i] setHidden:NO];
+//        [[boxesButtonsArray objectAtIndex:i] setHighlighted:NO];
+//        i++;
+//    }
+
+    [[boxesButtonsArray objectAtIndex:levels] setHidden:NO];
+    [[boxesButtonsArray objectAtIndex:levels] setHighlighted:NO];
     
 }//Show all boxes to click for this level
 
@@ -275,23 +287,25 @@ space10, space11, space12, space13, space14, space15, space16, space17;
     [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(showBoxesCurrent) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(playCamera) userInfo:nil repeats:NO];
     
-    [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(hideBoxes) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(hideLastBox) userInfo:nil repeats:NO];
     
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showBoxesCurrent) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(playCamera) userInfo:nil repeats:NO];
     
-    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(hideBoxes) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(hideLastBox) userInfo:nil repeats:NO];
     
     [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(showBoxesCurrent) userInfo:nil repeats:NO];
     [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(playCamera) userInfo:nil repeats:NO];
     
+    //[NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(hideLastBox) userInfo:nil repeats:NO];
+    
+    //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(showBoxesCurrent) userInfo:nil repeats:NO];
+    
+    //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(showLastBox) userInfo:nil repeats:NO];
+    
     [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(hideBoxes) userInfo:nil repeats:NO];
     
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(showBoxesCurrent) userInfo:nil repeats:NO];
-    
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(hideBoxes) userInfo:nil repeats:NO];
-    
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(enableGamePlay) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2.8 target:self selector:@selector(enableGamePlay) userInfo:nil repeats:NO];
 }//Blinks all boxes of this level 3 times then hides them to be chosen
 
 -(void) enableGamePlay{
@@ -360,15 +374,16 @@ space10, space11, space12, space13, space14, space15, space16, space17;
     {
     
         
-//        avPlayer.volume =  0.1;
-//        [avPlayer stop];
-//        NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"Classy-8-Bit" ofType:@"mp3"];
-//        NSURL *url = [NSURL fileURLWithPath:stringPath];
-//        
-//        NSError *error;
-//        
-//        avPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error: &error];
-//        [avPlayer play];
+        [avPlayer stop];
+        NSString *stringPath = [[NSBundle mainBundle]pathForResource:@"Classy-8-Bit" ofType:@"mp3"];
+        NSURL *url = [NSURL fileURLWithPath:stringPath];
+        
+        NSError *error;
+        
+        avPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error: &error];
+        [avPlayer play];
+        
+        avPlayer.volume =  0.1;
     }
     
 }
