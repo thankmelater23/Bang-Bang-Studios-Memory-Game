@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Group Swords Meet.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="RtK-mP-sRj" userLabel="BackGroundImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="RtK-mP-sRj" userLabel="BackGroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -231,29 +231,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-6y-tyN">
-                                <rect key="frame" x="18" y="20" width="207" height="46"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-6y-tyN">
+                                <rect key="frame" x="20" y="20" width="222" height="46"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.69803921570000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="toL-or-EwR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="The Penn's: Memory Game">
+                                <state key="normal" title="Bang Bang Studios: Memory Game">
                                     <color key="titleColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-7f-BfH">
-                                <rect key="frame" x="250" y="23" width="50" height="39"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="bY1-OI-2c5"/>
-                                    <constraint firstAttribute="height" constant="39" id="ygN-Jr-dBV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -266,7 +254,7 @@
                                     <constraint firstAttribute="width" constant="50" id="PeP-mN-txf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Soph.JPG">
+                                <state key="normal" backgroundImage="red.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -281,26 +269,11 @@
                                     <constraint firstAttribute="width" constant="50" id="Mpa-uA-uYr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Miche.JPG">
+                                <state key="normal" backgroundImage="blue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="faceChooser:" destination="2" eventType="touchUpInside" id="dOT-mD-fqJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSR-m6-McT" userLabel="picturePlace2">
-                                <rect key="frame" x="135" y="500" width="50" height="50"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.071919506859999996" blue="0.1212227595" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="NFN-8F-Ozn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Zak.JPG">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="faceChooser:" destination="2" eventType="touchUpInside" id="yFK-3D-p30"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCQ-ql-WiZ" userLabel="picturePlace3">
@@ -311,7 +284,7 @@
                                     <constraint firstAttribute="width" constant="50" id="pB4-Hz-tWr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Lil Zan.JPG">
+                                <state key="normal" backgroundImage="black.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -326,12 +299,39 @@
                                     <constraint firstAttribute="width" constant="50" id="blq-0L-IYP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="Logan.JPG">
+                                <state key="normal" backgroundImage="green.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="faceChooser:" destination="2" eventType="touchUpInside" id="mVw-2X-X5k"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSR-m6-McT" userLabel="picturePlace2">
+                                <rect key="frame" x="135" y="500" width="50" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.071919506859999996" blue="0.1212227595" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NFN-8F-Ozn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="white.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="faceChooser:" destination="2" eventType="touchUpInside" id="yFK-3D-p30"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-7f-BfH">
+                                <rect key="frame" x="250" y="20" width="50" height="46"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bY1-OI-2c5"/>
+                                    <constraint firstAttribute="height" constant="39" id="ygN-Jr-dBV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <animations/>
@@ -439,7 +439,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="goWait" destination="Nwz-7f-BfH" id="cMH-UI-Npl"/>
+                        <outlet property="goWait" destination="Nwz-7f-BfH" id="99s-3q-sdJ"/>
                         <outlet property="picturePlace0" destination="0gg-pV-47u" id="7tb-eI-RSN"/>
                         <outlet property="picturePlace1" destination="LBA-vM-NR9" id="QIa-1L-YvI"/>
                         <outlet property="picturePlace2" destination="GSR-m6-McT" id="Hxj-u0-7xH"/>
@@ -463,6 +463,7 @@
                         <outlet property="space7" destination="nOs-vR-STm" id="kBs-3c-IDP"/>
                         <outlet property="space8" destination="QpA-4R-26k" id="gr4-b2-1dt"/>
                         <outlet property="space9" destination="Fhf-iN-dqD" id="uUG-VD-AqF"/>
+                        <outlet property="view" destination="3" id="VvB-dg-SyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -471,12 +472,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group Swords Meet.JPG" width="1536" height="2048"/>
-        <image name="Lil Zan.JPG" width="237" height="269"/>
-        <image name="Logan.JPG" width="187" height="239"/>
-        <image name="Miche.JPG" width="532" height="601"/>
-        <image name="Soph.JPG" width="279" height="265"/>
-        <image name="Zak.JPG" width="141" height="209"/>
+        <image name="black.png" width="500" height="500"/>
+        <image name="blue.png" width="500" height="500"/>
         <image name="box.png" width="100" height="100"/>
+        <image name="green.png" width="500" height="500"/>
+        <image name="grey.png" width="500" height="500"/>
+        <image name="red.png" width="500" height="500"/>
+        <image name="white.png" width="500" height="500"/>
     </resources>
 </document>
